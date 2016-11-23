@@ -1,16 +1,20 @@
 version: '2'
 services:
   db:
-    image: runnable/mysql:5.6
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql
   web:
     build: .
-    volumes:
-      - .:/app
     ports:
-      - "3000:3000"
+      - "8080:80"
     depends_on:
       - db
     environment:
-      MYSQL_DATABASE: app
-      MYSQL_USER: mysql
-      MYSQL_PASSWORD: mysql
+      APP_ENV: local
+      APP_KEY: p1jb7h4dZMrBt6qpYnQCQYI06UZa5jRk
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_DATABASE: mysql
+      DB_USERNAME: root
+      DB_PASSWORD: mysql
