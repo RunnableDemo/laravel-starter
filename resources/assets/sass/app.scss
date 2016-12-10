@@ -1,3 +1,9 @@
+// dark theme colors
+$bg: #222;
+$gray: #888;
+$gray-dark: #555;
+$text-color: #fafafa;
+
 body,
 ul,
 li,
@@ -14,8 +20,8 @@ p {
 }
 
 body {
-  background: #fafafa;
-  color: #555;
+  background: $bg;
+  color: $text-color;
   font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
   line-height: 1.4;
 }
@@ -34,10 +40,10 @@ body {
 }
 
 .todo-list {
-  background: white;
-  border: 1px solid #e6e6e6;
+  background: $gray-dark;
+  border: 1px solid transparent;
   border-radius: 6px;
-  box-shadow: 0 1px 3px rgba(0,0,0,.06);
+  box-shadow: 0 1px 3px rgba(0,0,0,.1);
   margin: 15px 0 150px;
 }
 
@@ -47,15 +53,15 @@ body {
   padding: 18px;
   width: 100%;
 
-  + .add-todo,
+  + .new_todo,
   + .todo-list-item {
-    border-top: 1px solid #e6e6e6
+    border-top: 1px solid rgba(0,0,0,.3);
   }
 }
 
 .button-complete {
-  background: #fff;
-  border: 3px solid #e6e6e6;
+  background: $gray-dark;
+  border: 3px solid rgba(0,0,0,.3);
   border-radius: 6px;
   cursor: pointer;
   flex: 0 0 auto;
@@ -65,7 +71,7 @@ body {
 }
 
 .button-edit {
-  color: #888;
+  color: $gray;
   font-size: 15px;
   margin-left: auto;
   position: relative;
@@ -82,12 +88,11 @@ body {
 }
 
 .notification {
-  background: #fff;
-  border: 1px solid #e6e6e6;
+  background: $gray-dark;
+  border: 1px solid transparent;
   border-radius: 6px;
   border-width: 1px;
   box-shadow: 0 1px 3px rgba(0,0,0,.06);
-  color: #555;
   display: flex;
   padding: 15px;
 }
