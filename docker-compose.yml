@@ -8,8 +8,8 @@ services:
     build: .
     ports:
       - "8080:80"
-    depends_on:
-      - db
+    links:
+      - "db"
     environment:
       APP_ENV: local
       APP_KEY: p1jb7h4dZMrBt6qpYnQCQYI06UZa5jRk
