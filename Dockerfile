@@ -5,7 +5,7 @@ ADD [".", "/var/www/"]
 WORKDIR /var/www/
 
 # Apply proper file-access permissions for Apache2
-RUN rmdir /var/www/html/ \
+RUN rm -rf /var/www/html/ \
  && ln -s /var/www/public /var/www/html \
  && chown -R www-data /var/www/ \
  && chgrp -R www-data /var/www/ \
