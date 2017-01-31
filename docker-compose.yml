@@ -18,3 +18,4 @@ services:
       DB_DATABASE: mysql
       DB_USERNAME: root
       DB_PASSWORD: mysql
+    command: ["bash", "wait-for-mysql-then-run.sh"]
