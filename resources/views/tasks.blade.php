@@ -33,8 +33,6 @@
 
     </ul>
 
-    @include('common.errors')
-
     </div>
   </div>
 @endsection
