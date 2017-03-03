@@ -12,8 +12,8 @@ p {
   box-sizing: border-box; }
 
 body {
-  background: #fafafa;
-  color: #555;
+  background: #222;
+  color: #fafafa;
   font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
   line-height: 1.4; }
 
@@ -29,10 +29,10 @@ body {
   padding-left: 48px; }
 
 .todo-list {
-  background: white;
-  border: 1px solid #e6e6e6;
+  background: #555;
+  border: 1px solid transparent;
   border-radius: 6px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   margin: 15px 0 150px; }
 
 .todo-list-item {
@@ -41,13 +41,13 @@ body {
   font-size: 19px;
   padding: 18px;
   width: 100%; }
-  .todo-list-item + .add-todo,
+  .todo-list-item + .new_todo,
   .todo-list-item + .todo-list-item {
-    border-top: 1px solid #e6e6e6; }
+    border-top: 1px solid rgba(0, 0, 0, 0.3); }
 
 .button-complete {
-  background: #fff;
-  border: 3px solid #e6e6e6;
+  background: #555;
+  border: 3px solid rgba(0, 0, 0, 0.3);
   border-radius: 6px;
   cursor: pointer;
   -ms-flex: 0 0 auto;
@@ -72,12 +72,11 @@ body {
   padding-left: 48px; }
 
 .notification {
-  background: #fff;
-  border: 1px solid #e6e6e6;
+  background: #555;
+  border: 1px solid transparent;
   border-radius: 6px;
   border-width: 1px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
-  color: #555;
   display: -ms-flexbox;
   display: flex;
   padding: 15px; }
